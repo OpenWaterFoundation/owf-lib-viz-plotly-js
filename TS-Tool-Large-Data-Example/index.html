@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plotly TimeSeries</title>
+	<script src="javascript/plotly-latest.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Plotly TimeSeries</h1>
+<div id="chart"></div>
+<script>
+	Plotly.d3.csv('data-files/large-precip-data.csv',function(rows){
+		var trace = {
+			type: 'scatter',
+			mode: 'lines',
+			x: rows.map(function(row){
+				return row['Date']
+			}),
+			y: rows.map(function(row){
+				return row['053005']
+			}),
+			line: {
+				width: 1
+			},
+			name: '053005'
+		};
+				var trace2 = {
+			type: 'scatter',
+			mode: 'lines',
+			x: rows.map(function(row){
+				return row['Date']
+			}),
+			y: rows.map(function(row){
+				return row['058839']
+			}),
+			line: {
+				width: 1
+			},
+			name: '058839'
+		};
+				var trace3 = {
+			type: 'scatter',
+			mode: 'lines',
+			x: rows.map(function(row){
+				return row['Date']
+			}),
+			y: rows.map(function(row){
+				return row['052759']
+			}),
+			line: {
+				width: 1
+			},
+			name: '052759'
+		};
+		var layout = {
+			yaxis: {title: 'Precipitation'},
+			xaxis: {
+				title: 'Date',
+				showgrid: false,
+			},
+		};
+		Plotly.plot(document.getElementById('chart'),[trace, trace2, trace3],layout,{showLink: false});
+	});
+</script>
+</body>
+</html>

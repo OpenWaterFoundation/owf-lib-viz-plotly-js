@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Chart Example</title>
+	<!-- Javascript -->
+	<script src="javascript/plotly-latest.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="chart"></div>
+<script>
+	var series1 = {
+    	x: [1,2,3,4,5,6,7],
+    	y: [90,40,50,120,80,90,110],
+    	type: 'scatter',
+    	mode: 'lines',
+    	line: {
+    		width: 1
+    	},
+    	name: 'Series 1'
+  	}
+	var series2 = {
+    	x: [1,2,3,4,5,6,7],
+    	y: [120,160,200,null,130,220,160],
+    	type: 'scatter',
+    	mode: 'lines',
+    	line: {
+    		width: 1
+    	},
+    	name: 'Series 2'
+  	}
+  	var series3 = {
+    	x: [1,2,3,4,5,6,7],
+    	y: [300,240,290,230,300,320,330],
+    	type: 'scatter',
+    	mode: 'lines',
+    	line: {
+    		width: 1
+    	},
+    	name: 'Series 3'
+  	}
+  	var layout = {		// y and x axis labels
+			yaxis: {title: 'Y-AXIS'},
+			xaxis: {
+				title: 'X-AXIS',
+				showgrid: true	// Show grid on x-axis
+			},
+			title: 'Simple Chart Example',
+			legend: {
+				orientation: 'h'
+			}
+		};
+	Plotly.plot(document.getElementById('chart'), [series1,series2,series3],layout);
+</script>
+</body>
+</html>
