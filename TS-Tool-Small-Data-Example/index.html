@@ -17,7 +17,7 @@
 				return row['Date']
 			}),
 			y: rows.map(function(row){
-				return row['53005']
+				return row['053005']
 			}),
 			line: {
 				width: 1
@@ -31,7 +31,7 @@
 				return row['Date']
 			}),
 			y: rows.map(function(row){
-				return row['58839']
+				return row['058839']
 			}),
 			line: {
 				width: 1
@@ -45,26 +45,26 @@
 				return row['Date']
 			}),
 			y: rows.map(function(row){
-				return row['54054']
+				return row['054054']
 			}),
 			line: {
 				width: 1
 			},
-			name: '052759'
+			name: '054054'
 		};
-		var trace3 = {
+		var trace4 = {
 			type: 'scatter',
 			mode: 'lines',
 			x: rows.map(function(row){
 				return row['Date']
 			}),
 			y: rows.map(function(row){
-				return row['51060']
+				return row['051060']
 			}),
 			line: {
 				width: 1
 			},
-			name: '052759'
+			name: '051060'
 		};
 		var layout = {
 			yaxis: {title: 'Precipitation'},
@@ -73,7 +73,7 @@
 				showgrid: false,
 			},
 		};
-		Plotly.plot(document.getElementById('chart'),[trace, trace2, trace3],layout,{showLink: false});
+		Plotly.plot(document.getElementById('chart'),[trace, trace2, trace3,trace4],layout,{showLink: false});
 	});
 </script>
 </body>
