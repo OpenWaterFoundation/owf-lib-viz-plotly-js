@@ -12,7 +12,7 @@ A standard development folder structure is recommended. The website development 
 > cd Plotly-JS
 > mkdir git-repos
 > cd git-repos
-> git clone (URL)
+> git clone https://github.com/OpenWaterFoundation/owf-lib-viz-plotly-js
 ``` 
 The repository contains multiple folders that include time series examples using different sets of data.
 ## Additional Documentation
