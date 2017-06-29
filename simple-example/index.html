@@ -10,47 +10,58 @@
 <body>
 <div id="chart"></div>
 <script>
+
+    // First Series that will be plotted on the timeseries chart
 	var series1 = {
-    	x: [1,2,3,4,5,6,7],
-    	y: [90,40,50,120,80,90,110],
-    	type: 'scatter',
-    	mode: 'lines',
+    	x: [1,2,3,4,5,6,7],    // x data points
+    	y: [90,40,50,120,80,90,110],   // y data points 
+    	type: 'scatter',   // type of plot
+    	mode: 'lines', // how the data will be plotted (bar, lines, etc.)
     	line: {
-    		width: 1
+    		width: 1  // line width 
     	},
-    	name: 'Series 1'
+    	name: 'Series 1'   // name of series 
   	}
+    
+    // Second Series that will be plotted on the timeseries chart
 	var series2 = {
-    	x: [1,2,3,4,5,6,7],
-    	y: [120,160,200,null,130,220,160],
-    	type: 'scatter',
-    	mode: 'lines',
+    	x: [1,2,3,4,5,6,7],    // x data points
+    	y: [120,160,200,null,130,220,160], // y data points
+    	type: 'scatter',   // type of plot
+    	mode: 'lines', // how the data will be plotted (bar, lines, etc.)
     	line: {
-    		width: 1
+    		width: 1  // line width
     	},
-    	name: 'Series 2'
+    	name: 'Series 2'   // name of series
   	}
+
+    // Third Series that will be plotted on the timeseries chart
   	var series3 = {
-    	x: [1,2,3,4,5,6,7],
-    	y: [300,240,290,230,300,320,330],
-    	type: 'scatter',
-    	mode: 'lines',
+    	x: [1,2,3,4,5,6,7],    // x data points
+    	y: [300,240,290,230,300,320,330],  // y data points
+    	type: 'scatter',   // type of plot
+    	mode: 'lines', // how the data will be plotted (bar, lines, etc.)
     	line: {
-    		width: 1
+    		width: 1  // line width
     	},
-    	name: 'Series 3'
+    	name: 'Series 3'   // name of series
   	}
+
+    // Chart Options
   	var layout = {		// y and x axis labels
-			yaxis: {title: 'Y-AXIS'},
+			yaxis: {
+                title: 'Y-AXIS' // y axis title
+            },
 			xaxis: {
-				title: 'X-AXIS',
+				title: 'X-AXIS',    // x axis title
 				showgrid: true	// Show grid on x-axis
 			},
-			title: 'Simple Chart Example',
+			title: 'Simple Chart Example',   // Chart Title
 			legend: {
-				orientation: 'h'
+				orientation: 'h'    // orientation of legend (horizontal, vertical)
 			}
 		};
+    // Plot series with chart options
 	Plotly.plot(document.getElementById('chart'), [series1,series2,series3],layout);
 </script>
 </body>
